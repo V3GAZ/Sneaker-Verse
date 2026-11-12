@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#09091a">
+<meta name="description" content="SNEAKER//VERSE – eine interaktive Customer-Journey-Experience zum Vertrieb von Sneakern.">
+<title>SNEAKER//VERSE · Des Kunden neue Sneaker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-screen="landing" data-scene="night">
+<div class="backdrop" aria-hidden="true"></div><div class="ambient" aria-hidden="true"></div>
+<!-- The three screens are individually composed but share one consistent glass design system. -->
+<section id="landing" class="screen landing-screen" aria-labelledby="landing-heading">
+  <div class="landing-wrap">
+    <header class="landing-nav"><button class="wordmark" data-action="landing" aria-label="Startseite">SNEAKER<span>//</span>VERSE</button>
+      <nav aria-label="Landing-Navigation"><button class="nav-link active" data-action="landing">PROJEKT</button><button class="nav-link" data-action="intro">DIE IDEE</button><button class="nav-link" data-action="team">TEAM</button></nav>
+    </header>
+    <div class="landing-content">
+      <div class="landing-glass glass"><div class="eyebrow"><i></i> THE CUSTOMER JOURNEY PROJECT</div>
+        <h1 id="landing-heading">DES KUNDEN<br><em>NEUE SNEAKER.</em></h1>
+        <p class="landing-lead">Eine Entscheidung. Dutzende Touchpoints.<br>Drei Perspektiven.</p>
+        <p class="landing-detail">Marketing, Vertriebspolitik und Customer Journey – als interaktives Streaming-Erlebnis.</p>
+        <div class="button-row"><button id="start-experience" class="btn bright"><span>▶</span> EXPERIENCE STARTEN <span>→</span></button><button class="btn quiet" data-action="intro">Mehr entdecken <span>↗</span></button></div>
+        <div class="landing-tag">MARKETING <span>//</span> DISTRIBUTION <span>//</span> CUSTOMER JOURNEY</div>
+      </div>
+      <div class="landing-art-caption" aria-hidden="true"></div>
+    </div>
+    <footer class="landing-footer"><span>◌ &nbsp; VON SOPHIE, TOM, GEORGE, ERIK</span><span>◈ &nbsp; PROJEKT FÜR FRAU MÜLLER</span></footer>
+  </div>
+</section>
+
+<section id="profiles" class="screen profiles-screen" aria-labelledby="profiles-heading" hidden>
+  <div class="profiles-shell"><div class="profile-top"><button class="wordmark" data-action="landing">SNEAKER<span>//</span>VERSE</button><button class="round-action back" data-action="landing" aria-label="Zur Landingpage">←</button></div>
+    <header class="profiles-heading"><div class="eyebrow"><i></i> WÄHLE DEINEN EINSTIEG</div><h2 id="profiles-heading">WER SCHAUT <em>GERADE?</em></h2><p>Vier Perspektiven auf dieselbe Sneakerwelt. Die ganze Story erlebst du mit <strong>Deine Journey</strong>.</p></header>
+    <div class="profile-grid" id="profile-grid">
+      <button class="profile-card recommended" data-profile="custom" aria-label="Empfohlen: Deine Journey, alle vier Kapitel der Reihe nach"><span class="recommend">✦ EMPFOHLEN · START HIER</span><img src="assets/profile-custom.webp" alt="Gläserne Profilkarte zum Personalisieren"><span class="profile-grad"></span><span class="profile-text"><b>DEINE JOURNEY</b><small>Alle 4 Aufgaben · Schritt für Schritt</small></span><span class="profile-arrow">＋</span></button>
+      <button class="profile-card" data-profile="sneakerhead"><img src="assets/profile-sneakerhead.webp" alt="Sneaker-Sammlung mit violettem Licht"><span class="profile-grad"></span><span class="profile-text"><b>SNEAKERHEAD</b><small>Die Kundensicht</small></span><span class="profile-arrow">↗</span></button>
+      <button class="profile-card" data-profile="retailer"><img src="assets/profile-retailer.webp" alt="Moderner Sneaker-Store"><span class="profile-grad"></span><span class="profile-text"><b>HÄNDLER</b><small>Stationär & online</small></span><span class="profile-arrow">↗</span></button>
+      <button class="profile-card" data-profile="maker"><img src="assets/profile-maker.webp" alt="Sneaker-Designstudio"><span class="profile-grad"></span><span class="profile-text"><b>HERSTELLER</b><small>Vertriebsstrategie</small></span><span class="profile-arrow">↗</span></button>
+    </div>
+    <div id="custom-panel" class="custom-panel glass" hidden><button id="custom-back" class="round-action" aria-label="Zurück zur Auswahl">←</button><h3>DEINE EXPERIENCE.</h3><p>Wie sollen wir dich begrüßen?</p><div class="custom-form"><label>Name <input id="custom-name" maxlength="32" placeholder="Dein Name" autocomplete="off"></label><label>Profilbild (freiwillig) <input id="custom-file" type="file" accept="image/png,image/jpeg,image/webp"></label><button type="button" id="avatar-sample" class="avatar-sample" title="Bildauswahl anpassen" aria-label="Profilbild bearbeiten">＋</button></div><button id="custom-go" class="btn bright">MEINE JOURNEY STARTEN →</button><small>Dein Profil, dein Look: Wähle den Bildausschnitt, der später in deinem Profil erscheint.</small></div>
+  </div>
+</section>
+
+<section id="app" class="screen app-screen" aria-label="Streaming Plattform" hidden>
+  <div class="app-layout">
+    <nav class="rail glass" aria-label="Schnellnavigation">
+      <button class="rail-btn active" data-go="home" title="Startübersicht" aria-label="Startübersicht" data-label="Startübersicht"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></button>
+      <button class="rail-btn" data-go="play" title="Geführte Journey" aria-label="Geführte Journey" data-label="Geführte Journey"><svg viewBox="0 0 24 24"><path d="m7 4 14 8-14 8z"/></svg></button>
+      <button class="rail-btn" data-go="store" title="Händler und Kaufkriterien" aria-label="Händler und Kaufkriterien" data-label="Händler und Kaufkriterien"><svg viewBox="0 0 24 24"><path d="M3 9h18l-2-5H5L3 9ZM5 9v12h14V9M9 21v-7h6v7"/></svg></button>
+      <span class="rail-line" role="separator"></span>
+      <button class="rail-btn" data-go="stats" title="Zahlen und Fakten" aria-label="Zahlen und Fakten" data-label="Zahlen und Fakten"><svg viewBox="0 0 24 24"><path d="M4 20V11h3v9M10 20V4h3v16M16 20v-8h3v8"/></svg></button>
+      <button class="rail-btn" data-go="saved" title="Gespeicherte Themen" aria-label="Gespeicherte Themen" data-label="Gespeicherte Themen"><svg viewBox="0 0 24 24"><path d="m12 2 3.3 6.7 7.4 1.1-5.3 5.2 1.3 7.3-6.7-3.5-6.7 3.5 1.3-7.3-5.3-5.2 7.4-1.1z"/></svg></button>
+      <button class="rail-btn" data-go="info" title="Projekt und Team" aria-label="Projekt und Team" data-label="Projekt und Team"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7h.01"/></svg></button>
+    </nav>
+    <main class="app-main glass">
+      <header class="topbar"><button class="wordmark small" data-action="landing">SNEAKER<span>//</span>VERSE</button><nav class="tabs" aria-label="Themen-Navigation"><button class="tab active" data-tab="all">Entdecken</button><button class="tab" data-tab="journey">Journey</button><button class="tab" data-tab="distribution">Vertrieb</button><button class="tab" data-tab="retail">Kaufphase</button><button class="tab" data-tab="services">Services</button></nav></header>
+      <section class="hero" aria-label="Empfohlene Episode"><img id="hero-img" src="assets/profile-sneakerhead.webp" alt=""/><div class="hero-content"><span class="eyebrow" id="hero-eyebrow"><i></i> FEATURED EXPERIENCE</span><h1 id="hero-head">DES KUNDEN<br><em>NEUE SNEAKER.</em></h1><p id="hero-copy">Entdecke vier interaktive Episoden über Vertrieb und die Reise eines Sneakerheads.</p><div class="hero-actions"><button class="btn bright" id="hero-start">▶ &nbsp; EPISODE STARTEN</button><button class="btn quiet" id="hero-details">ⓘ &nbsp; ANSEHEN</button></div></div><div class="hero-controls"><div id="hero-dots" class="dots" aria-label="Hero wählen"></div><div class="hero-next"><button class="round-action" id="hero-prev" aria-label="Vorherige Episode">←</button><button class="round-action" id="hero-next" aria-label="Nächste Episode">→</button></div></div></section>
+      <section class="shelf"><div class="shelf-header"><div><h2 id="shelf-title">FÜR DICH ENTDECKT</h2><p id="shelf-subtitle">Vier Episoden. Alle Antworten. Deine Perspektive.</p></div><button class="text-link" id="show-all">Alle ansehen ↗</button></div><div class="episode-cards" id="episode-cards"></div></section>
+      <div class="app-footer"><span id="current-profile">SNEAKERHEAD · KUNDENSICHT</span><span class="footer-actions"><button type="button" id="george-mark" class="tiny-secret" title="Eine kleine Randnotiz" aria-label="Geheime Randnotiz">✳</button><button id="return-profiles" class="text-link">Profil wechseln ↗</button></span></div>
+    </main>
+    <aside class="app-side glass" aria-label="Insights und Fortschritt"><div class="tool-row"><button class="tool" id="search-toggle" title="Suche" aria-label="Suchen"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg></button><button class="tool" id="notification-toggle" title="Ungesehene Episoden" aria-label="Ungesehene Episoden"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9zM10 21h4"/></svg><i id="unread-dot"></i></button><button class="tool" id="settings-toggle" title="Einstellungen" aria-label="Einstellungen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.7 2.5h4.6l.56 2.07a8 8 0 0 1 1.6.66l1.86-1.06 3.25 3.25-1.06 1.86c.28.5.5 1.03.66 1.6l2.08.57v4.6l-2.08.56a8 8 0 0 1-.66 1.6l1.06 1.86-3.25 3.25-1.86-1.06a8 8 0 0 1-1.6.66l-.56 2.08H9.7l-.56-2.08a8 8 0 0 1-1.6-.66l-1.86 1.06-3.25-3.25 1.06-1.86a8 8 0 0 1-.66-1.6l-2.08-.56v-4.6l2.08-.57a8 8 0 0 1 .66-1.6L2.43 7.42l3.25-3.25 1.86 1.06a8 8 0 0 1 1.6-.66z" transform="translate(0 -.25) scale(.965) translate(.44 .44)"/><circle cx="12" cy="12" r="3.35"/></svg></button><button class="profile-circle" id="profile-toggle" title="Profil verwalten / wechseln" aria-label="Profil verwalten">S</button></div>
+      <div class="side-section"><div class="side-heading"><h3>SPOTLIGHT</h3><button class="text-link" id="side-all">Alles ansehen ↗</button></div><button class="feature-card" data-feature="ep2"><img src="assets/profile-retailer.webp" alt=""><span><b>IN-STORE EXPERIENCE</b><small>94,4 % · Persönliche Beratung</small></span><i>▶</i></button><button class="feature-card" data-feature="ep3"><img src="assets/card-digital.webp" alt=""><span><b>ONLINE × OFFLINE</b><small>Click & Collect erleben</small></span><i>▶</i></button></div>
+      <div class="side-section continue"><div class="side-heading"><h3>WEITER ANSEHEN</h3></div><div id="continue-list" class="continue-list"></div></div>
+      <div class="side-bottom"><span id="seen-count">0 / 4 EPISODEN</span><div class="track"><span id="total-progress"></span></div><small>Deine Entdeckungen bleiben lokal gespeichert.</small></div>
+    </aside>
+  </div>
+</section>
+
+<!-- Unified detail surface: each episode has its own interactive component and a complete written answer. -->
+<div class="modal" id="modal" hidden><div class="modal-scrim" id="modal-scrim"></div><section class="modal-panel glass" role="dialog" aria-modal="true" aria-labelledby="modal-heading"><div class="modal-top"><span class="eyebrow"><i></i> <span id="modal-label">EPISODE</span></span><div class="modal-top-actions"><button id="save-episode" class="icon-pill" aria-label="Episode speichern">☆ <span>Merken</span></button><button id="modal-close" class="icon-pill" aria-label="Schließen">✕</button></div></div><div class="modal-scroll"><h2 id="modal-heading"></h2><div id="modal-focus" class="modal-focus" hidden></div><p id="modal-intro" class="modal-intro"></p><div id="interactive" class="interactive"></div><div class="answer-block"><div class="answer-head"><span>✦ DIE FACHLICHE ANTWORT</span><span id="answer-number"></span></div><div id="answer-text"></div></div></div><div class="modal-bottom"><button id="modal-previous" class="btn quiet">← Vorherige Episode</button><span id="modal-index">01 / 04</span><button id="modal-done" class="btn bright">VERSTANDEN · WEITER →</button></div></section></div>
+<div class="topic-overlay" id="topic-overlay" hidden>
+ <div class="topic-scrim" id="topic-scrim"></div>
+ <section class="topic-panel glass" role="dialog" aria-modal="true" aria-labelledby="topic-title">
+  <header class="topic-toolbar"><span class="topic-kicker" id="topic-kicker">UNTERKAPITEL</span><button class="round-action" id="topic-close" aria-label="Unterkapitel schließen">✕</button></header>
+  <div class="topic-scroll" id="topic-scroll">
+   <div class="topic-image"><img id="topic-art" alt=""></div>
+   <div class="topic-contents"><h2 id="topic-title"></h2><p class="topic-lead" id="topic-lead"></p><div class="topic-points" id="topic-points"></div><div class="topic-takeaway"><span>✦ DAS WICHTIGSTE</span><p id="topic-takeaway"></p></div></div>
+  </div>
+  <footer class="topic-controls"><button class="btn quiet" id="topic-prev">← Vorheriges</button><span id="topic-index">01 / 04</span><button class="btn quiet" id="topic-to-episode">Ganze Episode ansehen ↗</button><button class="btn bright" id="topic-next">Nächstes Unterthema →</button></footer>
+ </section>
+</div>
+<div class="popover glass" id="popover" hidden role="dialog" aria-label="Menü"><div class="popover-top"><h3 id="popover-title">Menü</h3><button id="popover-close" class="round-action" aria-label="Menü schließen">✕</button></div><div id="popover-body"></div></div>
+
+<section id="crop-overlay" class="crop-overlay" role="dialog" aria-modal="true" aria-labelledby="crop-heading" hidden>
+ <div class="crop-underlay"></div><div class="crop-panel glass"><div class="crop-top"><div><span class="eyebrow"><i></i> DEIN PROFILBILD</span><h2 id="crop-heading">DEIN BILD. DEIN AUSSCHNITT.</h2></div><button id="crop-cancel" class="round-action" aria-label="Zuschnitt abbrechen">✕</button></div>
+ <p>Verschiebe dein Bild direkt im Kreis. Passe den Zoom an, bis es passt.</p>
+ <div class="crop-work"><div class="crop-wheel"><canvas id="crop-canvas" width="440" height="440" aria-label="Vorschau des runden Profilbilds"></canvas></div><div class="crop-controls"><label for="crop-zoom">Zoom <strong id="crop-zoom-label">100 %</strong></label><input id="crop-zoom" type="range" min="100" max="300" value="100" step="1"><button id="crop-reset" class="btn quiet">Ausschnitt zentrieren</button></div></div>
+ <div class="crop-actions"><button id="crop-save" class="btn bright">AUSSCHNITT ÜBERNEHMEN ✓</button></div></div>
+</section>
+<section id="finale" class="finale final-end" hidden aria-labelledby="finale-heading">
+ <div class="finale-stars" aria-hidden="true"></div>
+ <div class="finale-card glass"><span class="eyebrow"><i></i> SNEAKER//VERSE · CUSTOMER JOURNEY</span>
+ <div class="final-symbol" aria-hidden="true">✦</div>
+ <h2 id="finale-heading">DAS WAR’S JETZT <em>WIRKLICH …</em></h2>
+ <p class="final-endline">THE END.</p><p class="final-subline">Danke fürs Entdecken unserer Customer Journey.</p>
+ <div class="finale-buttons"><button id="finale-restart" class="btn bright">↻ VON VORNE STARTEN</button><button id="finale-profiles" class="btn quiet">◌ PROFILE WÄHLEN</button><button id="finale-explore" class="btn quiet">↗ WEITER STÖBERN</button></div>
+ <button class="finale-credit" id="production-credit" title="Versteckte Credits">✦ DEUTSCHE WEEKEND PRODUCTION</button>
+ </div>
+</section>
+<div id="matrix-transition" class="matrix-transition" hidden role="dialog" aria-label="Digitaler Übergang zum Abschluss" aria-modal="true">
+ <canvas id="matrix-canvas" aria-hidden="true"></canvas>
+ <div class="matrix-caption" id="matrix-intro">SNEAKER<span>//</span>VERSE <small>Vielen Dank für die Aufmerksamkeit! :)</small><span class="matrix-joke">Hoffentlich sieht Amazon das nicht …</span></div>
+ <div class="matrix-thanks" id="matrix-thanks"><span class="matrix-thanks-kicker">EINE LETZTE NACHRICHT AN FRAU MÜLLER</span><h2>Vielen Dank für den tollen Unterricht.</h2><p>Für Ihre weitere Schwangerschaft und die kommende Zeit<br>wünschen wir Ihnen alles Liebe und viel Glück.</p><span class="matrix-signature">SOPHIE <i>·</i> TOM <i>·</i> GEORGE <i>·</i> ERIK</span></div>
+ <div class="matrix-blackout" aria-hidden="true"></div>
+ <button id="matrix-skip" class="matrix-skip">ÜBERSPRINGEN ↗</button>
+</div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="app.js"></script>
+</body></html>
